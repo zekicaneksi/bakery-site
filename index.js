@@ -22,4 +22,18 @@ app.get('/categoryList', function (req, res) {
  
 });
 
+app.get('/productList', function(req, res){
+
+   var productList = [];
+
+   fs.readdir(path.join(__dirname, 'public/assets/products/' + req.query.category), (err, files) => {
+      files.forEach(file => {
+         productList.push(file.substring(0,file.indexOf('.')));
+      });
+      console.log(productList);
+      res.json(productList);
+    });
+
+});
+
 app.listen(8080);
