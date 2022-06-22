@@ -30,7 +30,6 @@ app.get('/productList', function(req, res){
       files.forEach(file => {
          productList.push(file.substring(0,file.indexOf('.')));
       });
-      console.log(productList);
       res.json(productList);
     });
 
