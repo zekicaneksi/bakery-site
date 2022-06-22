@@ -69,3 +69,31 @@ body{
         width: 100%;
     }
 }
+
+#categories{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 2% 4% 2% 4%;
+}
+
+#categories p{
+    border-style: solid;
+    border-color: #5E3023;
+    border-width: 3px;
+    margin: 2% 3% 0 0;
+    padding: 10px;
+    color: #5E3023;
+    font-size: 1.5em;
+}
+
+#categories p:hover{
+    background-color: #895737;
+    cursor: pointer;
+}
+
+.chosenCategory{
+    font-weight: bold;
+    background-color: #895737;
+}
